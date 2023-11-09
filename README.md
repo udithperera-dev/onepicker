@@ -9,7 +9,7 @@ Access many data by using a one picker
 
 ## Getting started
 
-To use this package, add boxing_images as a dependency in your pubspec.yaml file.
+To use this package, add onepicker as a dependency in your pubspec.yaml file.
 
 ## Usage
 
