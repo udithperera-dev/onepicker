@@ -7,7 +7,8 @@ class OnePicker {
   // /// Returns [value] plus 1.
   // int addOne(int value) => value + 1;
 
-  date(BuildContext context, {required ValueSetter<DateTime> onTap}) {
+  date(BuildContext context, {required ValueSetter<DateTime> onTap, Color selectedColor = Colors.green, Color bgColor = Colors.white
+    , }) {
     showModalBottomSheet<void>(
       context: context,
       barrierColor: Colors.black.withOpacity(0.1),
@@ -18,7 +19,7 @@ class OnePicker {
           onTap.call(value);
           Navigator.pop(context);
         },
-          selectedColor: Colors.blue,
+          selectedColor: selectedColor,
           bgColor: Colors.white,);
       },
     );

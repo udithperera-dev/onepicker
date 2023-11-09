@@ -31,11 +31,12 @@ class CalendarMonthView extends StatefulWidget {
 }
 
 class _CalendarMonthViewState extends State<CalendarMonthView> {
-   late DateTime selectedMonth;
-   late DateTime selectedDate;
+   DateTime selectedMonth = DateTime.now().monthStart;
+   DateTime selectedDate = DateTime.now().dayStart;
   @override
   void initState() {
     selectedMonth = DateTime.now().monthStart;
+    selectedMonth = DateTime.now().dayStart;
     super.initState();
   }
 
