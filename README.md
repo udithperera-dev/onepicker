@@ -41,4 +41,4 @@ OnePicker().date(
 
 - See also from Developer
 
-  [Akurupela Applications](https://akurupela.com/)
+  - [Akurupela Applications](https://akurupela.com)
