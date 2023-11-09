@@ -15,7 +15,7 @@ To use this package, add boxing_images as a dependency in your pubspec.yaml file
 
 - On pubspeck.yaml
 
-``` onepicker: ^1.0.0
+```onepicker: ^1.0.0
 ```
 
 - On Dart Import
@@ -26,7 +26,7 @@ To use this package, add boxing_images as a dependency in your pubspec.yaml file
 
 - On implementation
 
-```  OnePicker().date(
+```OnePicker().date(
                     context,
                     selectedColor: Colors.green,
                     bgColor: Colors.white,
