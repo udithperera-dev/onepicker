@@ -29,14 +29,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
   String dateSeleted = " - ";
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,10 +42,10 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Selected Date: ${dateSeleted}',
+              'Selected Date: $dateSeleted',
               style: Theme.of(context).textTheme.headline6,
             ),
-            SizedBox(height: 10,),
+            const SizedBox(height: 10),
             GestureDetector(
               onTap: (){
                 OnePicker().date(
@@ -66,15 +59,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
               child: Container(
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
                       border: Border.all(
                           color: Colors.green,
                           width: 4
                       ),
-                      borderRadius: BorderRadius.all(Radius.circular(50))
+                      borderRadius: const BorderRadius.all(Radius.circular(50))
                   ),
-                  child: Text(
+                  child: const Text(
                     'Click Here to Pick a Date',
                     style: TextStyle(color: Colors.green, fontSize: 20, fontWeight: FontWeight.bold),
                   )

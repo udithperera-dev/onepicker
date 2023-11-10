@@ -19,12 +19,13 @@ extension DateTimeExt on DateTime {
 }
 
 
+// ignore: must_be_immutable
 class CalendarMonthView extends StatefulWidget {
   ValueSetter<DateTime> onTap;
   Color bgColor;
   Color selectedColor;
 
-  CalendarMonthView({required this.onTap, required this.bgColor, required this.selectedColor});
+  CalendarMonthView({Key? key, required this.onTap, required this.bgColor, required this.selectedColor}) : super(key: key);
 
   @override
   State<CalendarMonthView> createState() => _CalendarMonthViewState();
@@ -44,10 +45,10 @@ class _CalendarMonthViewState extends State<CalendarMonthView> {
   Widget build(BuildContext context) {
     return Container(
       height: MediaQuery.of(context).size.height*0.42,
-      padding : EdgeInsets.only(left: 15, right: 15),
+      padding : const EdgeInsets.only(left: 15, right: 15),
       decoration: BoxDecoration(
         color: widget.bgColor,
-        borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+        borderRadius: const BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -120,7 +121,7 @@ class _Body extends StatelessWidget {
             Container(
               height: 1,
               color: Colors.black26,
-              margin: EdgeInsets.only(left: 5, right: 5),
+              margin: const EdgeInsets.only(left: 5, right: 5),
             ),
             for (var week in data.weeks)
               Row(
@@ -131,8 +132,7 @@ class _Body extends StatelessWidget {
                     date: d.date,
                     isActiveMonth: d.isActiveMonth,
                     onTap: () => selectDate(d.date),
-                    isSelected: selectedDate != null &&
-                        selectedDate.isSameDate(d.date),
+                    isSelected: selectedDate.isSameDate(d.date),
                     selectedColor: selectedColor,
                   );
                 }).toList(),
@@ -239,9 +239,9 @@ class _Header extends StatelessWidget {
               Expanded(
                 child: Text(
                   // 'Month: ${selectedMonth.month + 1}/${selectedMonth.year} ${DateFormat.MMMM().format(selectedMonth).toUpperCase()}',
-                  '${DateFormat.MMMM().format(selectedMonth).toUpperCase()}',
+                  DateFormat.MMMM().format(selectedMonth).toUpperCase(),
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontWeight:FontWeight.bold,
                       fontSize: 16,
                       color: Colors.black87
@@ -262,6 +262,7 @@ class _Header extends StatelessWidget {
   }
 }
 
+// ignore: unused_element
 class _Bottom extends StatelessWidget {
   const _Bottom({
      required this.selectedDate,
@@ -275,7 +276,7 @@ class _Bottom extends StatelessWidget {
       children: [
         ElevatedButton(
           onPressed: () {
-            print(selectedDate);
+            //print(selectedDate);
           },
           child: const Text('save'),
         ),
