@@ -40,7 +40,8 @@ OnePicker().date(
 ```
 
 <img src="https://github.com/udithperera-dev/onepicker/blob/main/screenshots/date_picker.png" alt="drawing" style="width:200px;"/>
-![alt text](https://github.com/udithperera-dev/onepicker/blob/main/screenshots/date_picker.png)
+
+![Date Picker](https://github.com/udithperera-dev/onepicker/blob/main/screenshots/date_picker.png =250x)
 
 - See also from Developer
 
