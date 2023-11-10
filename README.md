@@ -39,7 +39,7 @@ OnePicker().date(
                 );
 ```
 
-<img src="https://github.com/udithperera-dev/onepicker/blob/main/screenshots/date_picker.png" alt="drawing" style="width:200px;"/>
+[//]: # (<img src="https://github.com/udithperera-dev/onepicker/blob/main/screenshots/date_picker.png" alt="drawing" style="width:200px;"/>)
 
 ![Date Picker](https://github.com/udithperera-dev/onepicker/blob/main/screenshots/date_picker.png =250x)
 
