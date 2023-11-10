@@ -38,8 +38,18 @@ OnePicker().date(
                     }
                 );
 ```
-
-<img src="https://github.com/udithperera-dev/onepicker/blob/main/screenshots/date_picker.png" alt="drawing" style="width:150px;"/> <img src="https://github.com/udithperera-dev/onepicker/blob/main/screenshots/date_picker.png" alt="drawing" style="width:150px;"/>
+<table>
+  <tr>
+    <td>Date Picker</td>
+     <td>Date Range Picker</td>
+     <td>Other Picker</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/udithperera-dev/onepicker/blob/main/screenshots/date_picker.png" alt="drawing" style="width:150px;"/></td>
+    <td><img src="https://github.com/udithperera-dev/onepicker/blob/main/screenshots/date_picker.png" alt="drawing" style="width:150px;"/></td>
+    <td><img src="screenshots/date_picker.png" width=150></td>
+  </tr>
+ </table>
 
 - See also from Developer
 
