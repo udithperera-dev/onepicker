@@ -45,9 +45,9 @@ OnePicker().date(
      <td>Other Picker</td>
   </tr>
   <tr>
-    <td><img src="https://github.com/udithperera-dev/onepicker/blob/main/screenshots/date_picker.png" alt="drawing" style="width:150px;"/></td>
-    <td><img src="https://github.com/udithperera-dev/onepicker/blob/main/screenshots/date_picker.png" alt="drawing" style="width:150px;"/></td>
-    <td><img src="screenshots/date_picker.png" width=150></td>
+    <td><img src="https://github.com/udithperera-dev/onepicker/blob/main/ss_date_picker_01.png" alt="drawing" style="width:150px;"/></td>
+    <td><img src="https://github.com/udithperera-dev/onepicker/blob/main/ss_date_picker_01.png" alt="drawing" style="width:150px;"/></td>
+    <td><img src="https://github.com/udithperera-dev/onepicker/blob/main/ss_date_picker_01.png" width=150></td>
   </tr>
  </table>
 
