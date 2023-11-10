@@ -58,5 +58,5 @@ OnePicker().date(
 <p align="center">
       <a href="https://github.com/alexmojaki/futurecoder/blob/master/LICENSE.txt"><img src="https://img.shields.io/github/license/alexmojaki/futurecoder?style=flat" alt="GNU license" align="left"></a>
       <a href="https://github.com/alexmojaki/futurecoder/actions"><img src="https://github.com/alexmojaki/futurecoder/workflows/CI/badge.svg" alt="Tests status" align="left"></a>
-      <img src="https://www.akurupela.com/assets/images/images_info/ap_logo.png" width="300px" height="150px" alt="logo">
+      <img src="https://www.akurupela.com/assets/images/images_info/ap_logo.png" width="50px" alt="logo">
 </p>
