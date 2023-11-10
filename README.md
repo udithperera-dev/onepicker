@@ -56,7 +56,7 @@ OnePicker().date(
   - [Akurupela Applications](https://akurupela.com)
 
 <p align="center">
-      <a href="https://github.com/alexmojaki/futurecoder/blob/master/LICENSE.txt"><img src="https://img.shields.io/github/license/alexmojaki/futurecoder?style=flat" alt="GNU license" align="center"></a>
+      <a href="https://github.com/udithperera-dev/onepicker/blob/main/LICENSE"><img src="https://img.shields.io/github/license/alexmojaki/futurecoder?style=flat" alt="GNU license" align="center"></a>
       <img src="https://www.akurupela.com/assets/images/images_info/ap_logo.png" width="50px" alt="logo" align="center">
       <img src="https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308d2b854.svg" width="100px" alt="logo" align="center">
       <img src="https://pub.dev/static/hash-tihrt5d6/img/pub-dev-logo.svg" width="100px" alt="logo" align="center">
