@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bd716e6-0910-4558-9cbf-36d3f44f09e0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/date_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/date_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/onepicker_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/onepicker_test.dart" afterDir="false" />
-    </list>
+    <list default="true" id="6bd716e6-0910-4558-9cbf-36d3f44f09e0" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +28,7 @@
     "RunOnceActivity.cidr.known.project.marker": "true",
     "ScreenshotViewer.SavePath": "/Users/saberion/Desktop",
     "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
     "io.flutter.reload.alreadyRun": "true",
     "last_opened_file_path": "/Users/saberion/Documents/GitHub/onepicker/screenshots",
     "settings.editor.selected.configurable": "preferences.pluginManager",
