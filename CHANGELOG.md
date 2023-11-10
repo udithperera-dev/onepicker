@@ -5,3 +5,7 @@
 ## 0.0.2
 
 * Changes added for matching to Pub.dev standards.
+
+## 0.0.3
+
+* Changes added for matching to Pub.dev standards.

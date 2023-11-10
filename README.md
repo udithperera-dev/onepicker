@@ -1,6 +1,6 @@
 # onepicker
 
-Access many data by using a one picker
+Introducing our innovative data picker called OnePicker, a powerful tool that allows you to access a wide range of data effortlessly. With just one picker, you can conveniently retrieve and analyze multiple data sets, saving you time and effort. This user-friendly device is designed to provide seamless access to various data sources, making it an essential tool for professionals in various industries. Stay ahead of the game with our data picker and unlock a world of information at your fingertips.
 
 ## Features
 

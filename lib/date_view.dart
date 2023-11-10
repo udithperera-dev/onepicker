@@ -3,6 +3,7 @@ import 'package:intl/intl.dart';
 
 extension DateTimeExt on DateTime {
   DateTime get monthStart => DateTime(year, month);
+
   DateTime get dayStart => DateTime(year, month, day);
 
   DateTime addMonth(int count) {
@@ -18,22 +19,27 @@ extension DateTimeExt on DateTime {
   }
 }
 
-
 // ignore: must_be_immutable
 class CalendarMonthView extends StatefulWidget {
   ValueSetter<DateTime> onTap;
   Color bgColor;
   Color selectedColor;
 
-  CalendarMonthView({Key? key, required this.onTap, required this.bgColor, required this.selectedColor}) : super(key: key);
+  CalendarMonthView(
+      {Key? key,
+      required this.onTap,
+      required this.bgColor,
+      required this.selectedColor})
+      : super(key: key);
 
   @override
   State<CalendarMonthView> createState() => _CalendarMonthViewState();
 }
 
 class _CalendarMonthViewState extends State<CalendarMonthView> {
-   DateTime selectedMonth = DateTime.now().monthStart;
-   DateTime selectedDate = DateTime.now().dayStart;
+  DateTime selectedMonth = DateTime.now().monthStart;
+  DateTime selectedDate = DateTime.now().dayStart;
+
   @override
   void initState() {
     selectedMonth = DateTime.now().monthStart;
@@ -44,11 +50,12 @@ class _CalendarMonthViewState extends State<CalendarMonthView> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height*0.42,
-      padding : const EdgeInsets.only(left: 15, right: 15),
+      height: MediaQuery.of(context).size.height * 0.42,
+      padding: const EdgeInsets.only(left: 15, right: 15),
       decoration: BoxDecoration(
         color: widget.bgColor,
-        borderRadius: const BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+        borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(20), topRight: Radius.circular(20)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -81,10 +88,10 @@ class _CalendarMonthViewState extends State<CalendarMonthView> {
 
 class _Body extends StatelessWidget {
   const _Body({
-     required this.selectedMonth,
-     required this.selectedDate,
-     required this.selectDate,
-     required this.selectedColor,
+    required this.selectedMonth,
+    required this.selectedDate,
+    required this.selectDate,
+    required this.selectedColor,
   });
 
   final DateTime selectedMonth;
@@ -105,13 +112,22 @@ class _Body extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: const [
-            Text('MON', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),),
-            Text('TUS', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
-            Text('WED', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
-            Text('THU', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
-            Text('FRI', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
-            Text('SAT', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
-            Text('SUN', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+            Text(
+              'MON',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+            ),
+            Text('TUS',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+            Text('WED',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+            Text('THU',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+            Text('FRI',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+            Text('SAT',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+            Text('SUN',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
           ],
         ),
         const SizedBox(height: 10),
@@ -146,7 +162,7 @@ class _Body extends StatelessWidget {
 
 class _RowItem extends StatelessWidget {
   const _RowItem({
-     required this.hasRightBorder,
+    required this.hasRightBorder,
     required this.isActiveMonth,
     required this.isSelected,
     required this.date,
@@ -161,6 +177,7 @@ class _RowItem extends StatelessWidget {
   final Color selectedColor;
 
   final DateTime date;
+
   @override
   Widget build(BuildContext context) {
     final int number = date.day;
@@ -177,7 +194,7 @@ class _RowItem extends StatelessWidget {
             height: 35,
             width: 35,
             decoration: isSelected
-                ?  BoxDecoration(color: selectedColor, shape: BoxShape.circle)
+                ? BoxDecoration(color: selectedColor, shape: BoxShape.circle)
                 //: isToday
                 //? BoxDecoration(borderRadius: BorderRadius.circular(50), border: Border.all(color: AppColors.kPrimary,),)
                 : null,
@@ -186,23 +203,31 @@ class _RowItem extends StatelessWidget {
               style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.normal,
-                  color: isPassed ? isActiveMonth ? isSelected? Colors.white : Colors.grey : Colors.transparent : isActiveMonth ? isSelected? Colors.white : Colors.black : Colors.grey[300]
-              ),
+                  color: isPassed
+                      ? isActiveMonth
+                          ? isSelected
+                              ? Colors.white
+                              : Colors.grey
+                          : Colors.transparent
+                      : isActiveMonth
+                          ? isSelected
+                              ? Colors.white
+                              : Colors.black
+                          : Colors.grey[300]),
             ),
           ),
-          if(isToday)
-          Positioned(
-            bottom: 3,
-            right: 0,
-            left: 0,
-            child: Container(
-              height: 6,
-              width: 6,
-              decoration: BoxDecoration(
-                  color: selectedColor,
-                  shape: BoxShape.circle),
-            ),
-          )
+          if (isToday)
+            Positioned(
+              bottom: 3,
+              right: 0,
+              left: 0,
+              child: Container(
+                height: 6,
+                width: 6,
+                decoration:
+                    BoxDecoration(color: selectedColor, shape: BoxShape.circle),
+              ),
+            )
         ],
       ),
     );
@@ -211,9 +236,9 @@ class _RowItem extends StatelessWidget {
 
 class _Header extends StatelessWidget {
   const _Header({
-     required this.selectedMonth,
-     required this.selectedDate,
-     required this.onChange,
+    required this.selectedMonth,
+    required this.selectedDate,
+    required this.onChange,
   });
 
   final DateTime selectedMonth;
@@ -234,7 +259,11 @@ class _Header extends StatelessWidget {
                 onPressed: () {
                   onChange(selectedMonth.addMonth(-1));
                 },
-                icon: const Icon(Icons.keyboard_arrow_left, size: 30, color: Colors.black26,),
+                icon: const Icon(
+                  Icons.keyboard_arrow_left,
+                  size: 30,
+                  color: Colors.black26,
+                ),
               ),
               Expanded(
                 child: Text(
@@ -242,17 +271,17 @@ class _Header extends StatelessWidget {
                   DateFormat.MMMM().format(selectedMonth).toUpperCase(),
                   textAlign: TextAlign.center,
                   style: const TextStyle(
-                      fontWeight:FontWeight.bold,
+                      fontWeight: FontWeight.bold,
                       fontSize: 16,
-                      color: Colors.black87
-                  ),
+                      color: Colors.black87),
                 ),
               ),
               IconButton(
                 onPressed: () {
                   onChange(selectedMonth.addMonth(1));
                 },
-                icon: const Icon(Icons.keyboard_arrow_right, size: 30, color: Colors.black26),
+                icon: const Icon(Icons.keyboard_arrow_right,
+                    size: 30, color: Colors.black26),
               ),
             ],
           ),
@@ -265,7 +294,7 @@ class _Header extends StatelessWidget {
 // ignore: unused_element
 class _Bottom extends StatelessWidget {
   const _Bottom({
-     required this.selectedDate,
+    required this.selectedDate,
   });
 
   final DateTime selectedDate;
@@ -294,13 +323,14 @@ class CalendarMonthData {
   final int month;
 
   int get daysInMonth => DateUtils.getDaysInMonth(year, month);
+
   int get firstDayOfWeekIndex => 0;
 
   int get weeksCount => ((daysInMonth + firstDayOffset) / 7).ceil();
 
   const CalendarMonthData({
-     required this.year,
-     required this.month,
+    required this.year,
+    required this.month,
   });
 
   int get firstDayOffset {
@@ -317,7 +347,7 @@ class CalendarMonthData {
     for (var w = 0; w < weeksCount; w++) {
       final week = List<CalendarDayData>.generate(
         7,
-            (index) {
+        (index) {
           final date = firstDayOfWeek.add(Duration(days: index));
 
           final isActiveMonth = date.year == year && date.month == month;
@@ -342,12 +372,11 @@ class CalendarDayData {
   final bool isActiveDate;
 
   const CalendarDayData({
-     required this.date,
-     required this.isActiveMonth,
-     required this.isActiveDate,
+    required this.date,
+    required this.isActiveMonth,
+    required this.isActiveDate,
   });
 }
-
 
 Color invert(Color color) {
   final r = 255 - color.red;
