@@ -25,7 +25,7 @@ onepicker: ^0.0.1
 import 'package:onepicker/onepicker.dart';
 ```
 
-- On implementation
+- On implementation of Date Picker
 
 ```
 OnePicker().date(
@@ -38,6 +38,8 @@ OnePicker().date(
                     }
                 );
 ```
+
+![alt text](https://github.com/udithperera-dev/onepicker/blob/main/screenshots/date_picker.png)
 
 - See also from Developer
 
