@@ -5,6 +5,7 @@ Introducing our innovative data picker called OnePicker, a powerful tool that al
 ## Features
 
 - Date Picker
+- Date Range Picker
 
 
 ## Getting started
@@ -16,7 +17,7 @@ To use this package, add onepicker as a dependency in your pubspec.yaml file.
 - On pubspeck.yaml
 
 ```
-onepicker: ^0.0.1
+onepicker: ^0.0.7
 ```
 
 - On Dart Import
@@ -38,6 +39,19 @@ OnePicker().date(
                     }
                 );
 ```
+
+- On implementation of Date Range Picker
+
+```
+   OnePicker().dateRange(
+                    context,
+                    onTap: (from, to){
+                      dateFromSeleted = DateFormat('yyyy-MM-dd') .format(from).toString();
+                      dateToSeleted = DateFormat('yyyy-MM-dd') .format(to).toString();
+                      setState(() {});
+                    }
+                );
+```
 <table>
   <tr>
     <td>Date Picker</td>
@@ -46,7 +60,7 @@ OnePicker().date(
   </tr>
   <tr>
     <td width="30%"><img src="https://github.com/udithperera-dev/onepicker/raw/da699e52551ccc39f7775bf55679d7139a7cedc9/ss_date_picker_01.png" alt="date-picker" style="width:150px;"/></td>
-    <td width="30%"><img src="https://github.com/udithperera-dev/onepicker/raw/da699e52551ccc39f7775bf55679d7139a7cedc9/ss_date_picker_01.png" alt="date-range-picker" style="width:150px;"/></td>
+    <td width="30%"><img src="https://github.com/udithperera-dev/onepicker/raw/da699e52551ccc39f7775bf55679d7139a7cedc9/ss_date_range_picker_01.png" alt="date-range-picker" style="width:150px;"/></td>
     <td width="30%"><img src="https://github.com/udithperera-dev/onepicker/raw/da699e52551ccc39f7775bf55679d7139a7cedc9/ss_date_picker_01.png" style="width:150px;"></td>
   </tr>
  </table>
