@@ -1,4 +1,4 @@
-## 0.0.1
+_## 0.0.1
 
 * Initial release.
 
@@ -29,5 +29,10 @@
 
 
 ## 0.0.8
+
+* intl issue fixed.
+
+
+* ## 0.0.9
 
 * intl issue fixed.
