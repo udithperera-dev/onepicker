@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-
 // ================== Calendar View ===============================================
 /// `const CustomCalendar({
 ///   Key? key,
@@ -38,7 +37,7 @@ class CustomCalendar extends StatefulWidget {
     this.startEndDateChange,
     this.minimumDate,
     this.maximumDate,
-     this.primaryColor,
+    this.primaryColor,
   }) : super(key: key);
 
   @override
@@ -91,7 +90,7 @@ class CustomCalendarState extends State<CustomCalendar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding : const EdgeInsets.only(left: 15, right: 15),
+      padding: const EdgeInsets.only(left: 15, right: 15),
       child: Column(
         children: <Widget>[
           Padding(
@@ -126,13 +125,14 @@ class CustomCalendarState extends State<CustomCalendar> {
                 Expanded(
                   child: Center(
                     child: Text(
-                      DateFormat('MMMM yyyy').format(currentMonthDate).toUpperCase(),
+                      DateFormat('MMMM yyyy')
+                          .format(currentMonthDate)
+                          .toUpperCase(),
                       textAlign: TextAlign.center,
                       style: const TextStyle(
                           fontWeight: FontWeight.normal,
                           fontSize: 16,
-                          color: Colors.black87
-                      ),
+                          color: Colors.black87),
                     ),
                   ),
                 ),
@@ -176,7 +176,6 @@ class CustomCalendarState extends State<CustomCalendar> {
               children: getDaysNoUI(),
             ),
           ),
-
         ],
       ),
     );
@@ -190,7 +189,8 @@ class CustomCalendarState extends State<CustomCalendar> {
           child: Center(
             child: Text(
               DateFormat('EEE').format(dateList[i]).toUpperCase(),
-              style: const TextStyle(fontWeight: FontWeight.normal, fontSize: 14),
+              style:
+                  const TextStyle(fontWeight: FontWeight.normal, fontSize: 14),
             ),
           ),
         ),
@@ -209,7 +209,7 @@ class CustomCalendarState extends State<CustomCalendar> {
         listUI.add(
           Container(
             // width: Get.width*0.1255,
-            width: MediaQuery.of(context).size.width*0.1255,
+            width: MediaQuery.of(context).size.width * 0.1255,
             height: 40,
             alignment: Alignment.center,
             child: Stack(
@@ -228,9 +228,9 @@ class CustomCalendarState extends State<CustomCalendar> {
                         decoration: BoxDecoration(
                           color: startDate != null && endDate != null
                               ? getIsItStartAndEndDate(date) ||
-                              getIsInRange(date)
-                              ? kPrimery.withOpacity(0.4)
-                              : Colors.transparent
+                                      getIsInRange(date)
+                                  ? kPrimery.withOpacity(0.4)
+                                  : Colors.transparent
                               : Colors.transparent,
                           borderRadius: BorderRadius.only(
                             bottomLeft: isStartDateRadius(date)
@@ -299,7 +299,8 @@ class CustomCalendarState extends State<CustomCalendar> {
                         color: getIsItStartAndEndDate(date)
                             ? kPrimery
                             : Colors.transparent,
-                        borderRadius: const BorderRadius.all(Radius.circular(32.0)),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(32.0)),
                         // border: Border.all(
                         //   color: getIsItStartAndEndDate(date)
                         //       ? Colors.white
@@ -322,8 +323,8 @@ class CustomCalendarState extends State<CustomCalendar> {
                             color: getIsItStartAndEndDate(date)
                                 ? Colors.white
                                 : currentMonthDate.month == date.month
-                                ? Colors.black
-                                : Colors.grey.withOpacity(0.6),
+                                    ? Colors.black
+                                    : Colors.grey.withOpacity(0.6),
                             // fontSize:
                             // MediaQuery.of(context).size.width > 360
                             //     ? 18
@@ -349,11 +350,11 @@ class CustomCalendarState extends State<CustomCalendar> {
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
                         color: DateTime.now().day == date.day &&
-                            DateTime.now().month == date.month &&
-                            DateTime.now().year == date.year
+                                DateTime.now().month == date.month &&
+                                DateTime.now().year == date.year
                             ? getIsInRange(date)
-                            ? Colors.white
-                            : Colors.green
+                                ? Colors.white
+                                : Colors.green
                             : Colors.transparent,
                         shape: BoxShape.circle),
                   ),
@@ -461,10 +462,7 @@ class CustomCalendarState extends State<CustomCalendar> {
   }
 }
 
-
-
 // ======================== Picker View ==========================================
-
 
 /// A custom date range picker widget that allows users to select a date range.
 /// `const CustomDateRangePicker({
@@ -513,14 +511,14 @@ class CustomDateRangePicker extends StatefulWidget {
     Key? key,
     this.initialStartDate,
     this.initialEndDate,
-     this.primaryColor,
-     this.backgroundColor,
-     this.onApplyClick,
+    this.primaryColor,
+    this.backgroundColor,
+    this.onApplyClick,
     this.barrierDismissible = true,
-     this.minimumDate,
-     this.maximumDate,
-     this.onCancelClick,
-     this.showSelected = true,
+    this.minimumDate,
+    this.maximumDate,
+    this.onCancelClick,
+    this.showSelected = true,
   }) : super(key: key);
 
   @override
@@ -556,7 +554,8 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
     return Container(
       decoration: BoxDecoration(
         color: widget.backgroundColor,
-        borderRadius: const BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+        borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(20), topRight: Radius.circular(20)),
       ),
       child: InkWell(
         borderRadius: const BorderRadius.all(Radius.circular(24.0)),
@@ -568,20 +567,20 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
           children: <Widget>[
             Visibility(
               visible: widget.showSelected,
-              child:  Row(
+              child: Row(
                 children: <Widget>[
-                 GestureDetector(
-                   onTap: (){
-                     try {
-                       widget.onCancelClick!();
-                       Navigator.pop(context);
-                     } catch (_) {}
-                   },
-                   child:  const SizedBox(
-                     width: 50,
-                     child: Icon(Icons.clear),
-                   ),
-                 ),
+                  GestureDetector(
+                    onTap: () {
+                      try {
+                        widget.onCancelClick!();
+                        Navigator.pop(context);
+                      } catch (_) {}
+                    },
+                    child: const SizedBox(
+                      width: 50,
+                      child: Icon(Icons.clear),
+                    ),
+                  ),
                   Expanded(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -601,8 +600,7 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
                         ),
                         Text(
                           startDate != null
-                              ? DateFormat('EEE, dd MMM')
-                              .format(startDate!)
+                              ? DateFormat('EEE, dd MMM').format(startDate!)
                               : '--/-- ',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
@@ -636,8 +634,7 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
                         ),
                         Text(
                           endDate != null
-                              ? DateFormat('EEE, dd MMM')
-                              .format(endDate!)
+                              ? DateFormat('EEE, dd MMM').format(endDate!)
                               : '--/-- ',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
@@ -649,7 +646,7 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
                     ),
                   ),
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       try {
                         widget.onApplyClick!(startDate!, endDate!);
                         Navigator.pop(context);
@@ -682,7 +679,7 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
             ),
             Visibility(
               visible: false,
-              child:  Padding(
+              child: Padding(
                 padding: const EdgeInsets.only(
                     left: 16, right: 16, bottom: 16, top: 8),
                 child: Row(
@@ -691,8 +688,7 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
                       child: Container(
                         height: 48,
                         decoration: const BoxDecoration(
-                          borderRadius:
-                          BorderRadius.all(Radius.circular(24.0)),
+                          borderRadius: BorderRadius.all(Radius.circular(24.0)),
                         ),
                         child: OutlinedButton(
                           style: ButtonStyle(
@@ -700,12 +696,12 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
                                 BorderSide(color: widget.primaryColor!)),
                             shape: MaterialStateProperty.all(
                               const RoundedRectangleBorder(
-                                borderRadius: BorderRadius.all(
-                                    Radius.circular(24.0)),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(24.0)),
                               ),
                             ),
-                            backgroundColor: MaterialStateProperty.all(
-                                widget.primaryColor),
+                            backgroundColor:
+                                MaterialStateProperty.all(widget.primaryColor),
                           ),
                           onPressed: () {
                             try {
@@ -731,8 +727,7 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
                       child: Container(
                         height: 48,
                         decoration: const BoxDecoration(
-                          borderRadius:
-                          BorderRadius.all(Radius.circular(24.0)),
+                          borderRadius: BorderRadius.all(Radius.circular(24.0)),
                         ),
                         child: OutlinedButton(
                           style: ButtonStyle(
@@ -740,12 +735,12 @@ class CustomDateRangePickerState extends State<CustomDateRangePicker>
                                 BorderSide(color: widget.primaryColor!)),
                             shape: MaterialStateProperty.all(
                               const RoundedRectangleBorder(
-                                borderRadius: BorderRadius.all(
-                                    Radius.circular(24.0)),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(24.0)),
                               ),
                             ),
-                            backgroundColor: MaterialStateProperty.all(
-                                widget.primaryColor),
+                            backgroundColor:
+                                MaterialStateProperty.all(widget.primaryColor),
                           ),
                           onPressed: () {
                             try {
