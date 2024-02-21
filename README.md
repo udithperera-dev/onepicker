@@ -17,7 +17,7 @@ To use this package, add onepicker as a dependency in your pubspec.yaml file.
 - On pubspeck.yaml
 
 ```
-onepicker: ^0.0.9
+onepicker: ^0.1.0
 ```
 
 - On Dart Import
@@ -67,7 +67,7 @@ OnePicker().date(
 
 - See also from Developer
 
-  - [Akurupela Applications](https://akurupela.com)
+    - [Akurupela Applications](https://akurupela.com)
 
 <p align="center">
       <img src="https://www.akurupela.com/assets/images/images_info/ap_logo.png" width="25px" alt="logo" align="center">

@@ -1,21 +1,21 @@
 name: onepicker
 description: Introducing our innovative data picker called OnePicker, a powerful tool that allows you to access a wide range of data effortlessly.
-version: 0.0.9
+version: 0.1.0
 homepage: https://github.com/udithperera-dev/onepicker
 
 environment:
-  sdk: '>=2.16.2 <4.0.0'
-  flutter: ">=1.20.0"
+  sdk: '>=3.1.5 <4.0.0'
+  flutter: '>=3.3.0'
 
 dependencies:
   flutter:
     sdk: flutter
-  intl: ^0.18.1
+  intl: ^0.19.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^1.0.0
+  flutter_lints: ^2.0.0
 
 topics:
   - onepicker

@@ -36,3 +36,7 @@ _## 0.0.1
 * ## 0.0.9
 
 * intl issue fixed.
+
+* ## 0.1.0
+
+* intl update.
