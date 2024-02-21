@@ -1,16 +1,24 @@
-_## 0.0.1
+* ## 0.1.1
 
-* Initial release.
+* doc update.
 
-## 0.0.2
+* ## 0.1.0
 
-* Changes added for matching to Pub.dev standards.
+* intl update.
 
-## 0.0.3
+* ## 0.0.9
 
-* Changes added for matching to Pub.dev standards.
+* intl issue fixed.
 
-## 0.0.4
+## 0.0.8
+
+* intl issue fixed.
+
+## 0.0.7
+
+* Date range picker added.
+
+## 0.0.6
 
 * Changes added for matching to Pub.dev standards.
 
@@ -18,25 +26,18 @@ _## 0.0.1
 
 * Changes added for matching to Pub.dev standards.
 
-## 0.0.6
+## 0.0.4
 
 * Changes added for matching to Pub.dev standards.
 
+## 0.0.3
 
-## 0.0.7
+* Changes added for matching to Pub.dev standards.
 
-* Date range picker added.
+## 0.0.2
 
+* Changes added for matching to Pub.dev standards.
 
-## 0.0.8
+## 0.0.1
 
-* intl issue fixed.
-
-
-* ## 0.0.9
-
-* intl issue fixed.
-
-* ## 0.1.0
-
-* intl update.
+* Initial release.
