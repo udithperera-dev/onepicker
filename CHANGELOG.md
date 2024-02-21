@@ -1,12 +1,16 @@
-* ## 0.1.1
+## 0.1.2
 
 * doc update.
 
-* ## 0.1.0
+## 0.1.1
+
+* doc update.
+
+## 0.1.0
 
 * intl update.
 
-* ## 0.0.9
+## 0.0.9
 
 * intl issue fixed.
 
