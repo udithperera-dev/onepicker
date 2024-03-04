@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bd716e6-0910-4558-9cbf-36d3f44f09e0" name="Changes" comment="country picker added" />
+    <list default="true" id="6bd716e6-0910-4558-9cbf-36d3f44f09e0" name="Changes" comment="doc update">
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -191,7 +194,23 @@
       <option name="project" value="LOCAL" />
       <updated>1709541003293</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="country picker added 2">
+      <option name="closed" value="true" />
+      <created>1709541300062</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1709541300063</updated>
+    </task>
+    <task id="LOCAL-00015" summary="doc update">
+      <option name="closed" value="true" />
+      <created>1709541649905</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1709541649905</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -223,9 +242,10 @@
     <MESSAGE value="version: 0.0.8" />
     <MESSAGE value="lint issue fixed" />
     <MESSAGE value="readme update" />
-    <MESSAGE value="doc update" />
     <MESSAGE value="package update" />
     <MESSAGE value="country picker added" />
-    <option name="LAST_COMMIT_MESSAGE" value="country picker added" />
+    <MESSAGE value="country picker added 2" />
+    <MESSAGE value="doc update" />
+    <option name="LAST_COMMIT_MESSAGE" value="doc update" />
   </component>
 </project>

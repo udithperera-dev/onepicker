@@ -109,9 +109,9 @@ class _Body extends StatelessWidget {
 
     return Column(
       children: [
-        const Row(
+        Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
+          children: const [
             Text(
               'MON',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),

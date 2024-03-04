@@ -18,7 +18,7 @@ To use this package, add onepicker as a dependency in your pubspec.yaml file.
 - On pubspeck.yaml
 
 ```
-onepicker: ^0.1.5
+onepicker: ^0.1.6
 ```
 
 - On Dart Import

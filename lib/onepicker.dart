@@ -67,13 +67,11 @@ class OnePicker {
   }
 
   country(
-      BuildContext context,
-      {
-        required ValueSetter<Country> onTap,
-        Color selectedColor = Colors.green,
-        Color bgColor = Colors.white,
-      }
-  ){
+    BuildContext context, {
+    required ValueSetter<Country> onTap,
+    Color selectedColor = Colors.green,
+    Color bgColor = Colors.white,
+  }) {
     showModalBottomSheet<void>(
       context: context,
       barrierColor: Colors.black.withOpacity(0.1),
@@ -86,7 +84,8 @@ class OnePicker {
             Navigator.pop(context);
           },
           selectedColor: selectedColor,
-          bgColor: Colors.white, init: countries.first,
+          bgColor: Colors.white,
+          init: countries.first,
         );
       },
     );
