@@ -1970,6 +1970,7 @@ const List<Country> countries = [
     maxLength: 9,
   ),
 ];
+
 class Country {
   final String name;
   final String flag;
@@ -1988,6 +1989,7 @@ class Country {
   });
 }
 
+// ignore: must_be_immutable
 class CoungtryView extends StatefulWidget {
   Country init;
   ValueSetter<Country> onTap;
@@ -1996,10 +1998,10 @@ class CoungtryView extends StatefulWidget {
 
   CoungtryView(
       {Key? key,
-        required this.init,
-        required this.onTap,
-        required this.bgColor,
-        required this.selectedColor})
+      required this.init,
+      required this.onTap,
+      required this.bgColor,
+      required this.selectedColor})
       : super(key: key);
 
   @override
@@ -2007,7 +2009,6 @@ class CoungtryView extends StatefulWidget {
 }
 
 class _CoungtryViewState extends State<CoungtryView> {
-
   @override
   void initState() {
     super.initState();
@@ -2028,25 +2029,28 @@ class _CoungtryViewState extends State<CoungtryView> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             child: const Text(
               'Country Picker',
-              style: TextStyle(color: Colors.green, fontSize: 20, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  color: Colors.green,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
           ),
           Expanded(
             child: GridView.builder(
-                scrollDirection: Axis.horizontal,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 5,
-                    crossAxisSpacing: 4.0,
-                    mainAxisSpacing: 4.0,
-                ),
+              scrollDirection: Axis.horizontal,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 5,
+                crossAxisSpacing: 4.0,
+                mainAxisSpacing: 4.0,
+              ),
               itemCount: countries.length,
-              itemBuilder: (BuildContext context, int index){
+              itemBuilder: (BuildContext context, int index) {
                 return GestureDetector(
-                  onTap: (){
+                  onTap: () {
                     widget.onTap.call(countries[index]);
                     Navigator.pop;
                   },
@@ -2056,12 +2060,20 @@ class _CoungtryViewState extends State<CoungtryView> {
                         border: Border.all(
                           color: Colors.black12,
                         ),
-                        borderRadius: BorderRadius.all(Radius.circular(10))
-                    ),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(10))),
                     child: Column(
                       children: [
-                        Text("${countries[index].flag}", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
-                        Text("${countries[index].code}", style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),),
+                        Text(
+                          countries[index].flag,
+                          style: const TextStyle(
+                              fontSize: 30, fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          countries[index].code,
+                          style: const TextStyle(
+                              fontSize: 10, fontWeight: FontWeight.bold),
+                        ),
                       ],
                     ),
                   ),
