@@ -33,6 +33,9 @@ class _MyHomePageState extends State<MyHomePage> {
   String dateSeleted = " - ";
   String dateFromSeleted = " - ";
   String dateToSeleted = " - ";
+  String countryFlagSeleted = " - ";
+  String countryCodeSeleted = " - ";
+  String countryNameSeleted = " - ";
 
   @override
   Widget build(BuildContext context) {
@@ -110,6 +113,45 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   child: const Text(
                     'Date Range Picker',
+                    style: TextStyle(color: Colors.green, fontSize: 20, fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.center,
+                  )
+              ),
+            ),
+            const SizedBox(height: 20),
+            Text(
+              'Selected Country'
+                  '\n Flag: $countryFlagSeleted'
+                  '\n Code: $countryCodeSeleted'
+                  '\n Name: $countryNameSeleted'
+                  '',
+              style: Theme.of(context).textTheme.titleLarge,
+              textAlign: TextAlign.left,
+            ),
+            const SizedBox(height: 10),
+            GestureDetector(
+              onTap: (){
+                OnePicker().country(
+                    context,
+                    onTap: (value){
+                      countryFlagSeleted = value.flag;
+                      countryCodeSeleted = value.code;
+                      countryNameSeleted = value.name;
+                      setState(() {});
+                    }
+                );
+              },
+              child: Container(
+                  padding: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                      border: Border.all(
+                          color: Colors.green,
+                          width: 4
+                      ),
+                      borderRadius: const BorderRadius.all(Radius.circular(50))
+                  ),
+                  child: const Text(
+                    'Country Picker',
                     style: TextStyle(color: Colors.green, fontSize: 20, fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center,
                   )

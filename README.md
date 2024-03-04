@@ -17,7 +17,7 @@ To use this package, add onepicker as a dependency in your pubspec.yaml file.
 - On pubspeck.yaml
 
 ```
-onepicker: ^0.1.3
+onepicker: ^0.1.4
 ```
 
 - On Dart Import
@@ -56,12 +56,12 @@ OnePicker().date(
   <tr>
     <td>Date Picker</td>
      <td>Date Range Picker</td>
-     <td>Other Picker</td>
+     <td>Country Picker</td>
   </tr>
   <tr>
     <td width="30%"><img src="https://github.com/udithperera-dev/onepicker/raw/da699e52551ccc39f7775bf55679d7139a7cedc9/ss_date_picker_01.png" alt="date-picker" style="width:150px;"/></td>
     <td width="30%"><img src="https://github.com/udithperera-dev/onepicker/raw/6d3256556bcde588cc10e1fae84b42a13ea21d6a/ss_date_range_picker_02.png" alt="date-range-picker" style="width:150px;"/></td>
-    <td width="30%"><img src="https://github.com/udithperera-dev/onepicker/raw/da699e52551ccc39f7775bf55679d7139a7cedc9/ss_date_picker_01.png" style="width:150px;"></td>
+    <td width="30%"><img src="https://github.com/udithperera-dev/onepicker/raw/da699e52551ccc39f7775bf55679d7139a7cedc9/ss_country_picker.png" style="width:150px;"></td>
   </tr>
  </table>
 
