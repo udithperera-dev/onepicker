@@ -6,6 +6,7 @@ Introducing our innovative data picker called OnePicker, a powerful tool that al
 
 - Date Picker
 - Date Range Picker
+- Country Picker
 
 
 ## Getting started
@@ -61,7 +62,7 @@ OnePicker().date(
   <tr>
     <td width="30%"><img src="https://github.com/udithperera-dev/onepicker/raw/da699e52551ccc39f7775bf55679d7139a7cedc9/ss_date_picker_01.png" alt="date-picker" style="width:150px;"/></td>
     <td width="30%"><img src="https://github.com/udithperera-dev/onepicker/raw/6d3256556bcde588cc10e1fae84b42a13ea21d6a/ss_date_range_picker_02.png" alt="date-range-picker" style="width:150px;"/></td>
-    <td width="30%"><img src="https://github.com/udithperera-dev/onepicker/raw/da699e52551ccc39f7775bf55679d7139a7cedc9/ss_country_picker.png" style="width:150px;"></td>
+    <td width="30%"><img src="https://raw.githubusercontent.com/udithperera-dev/onepicker/fc1934b1c902692069937d59197e8f8645bc2083/ss_country_picker.png" style="width:150px;"></td>
   </tr>
  </table>
 
